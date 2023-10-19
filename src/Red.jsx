@@ -1,7 +1,9 @@
 export default function Red() {
     return (
       <div className="red">
-        <h1>RED</h1>
+        <div className="box">
+          <h1>RED</h1>
+        </div>
       </div>
     );
   }

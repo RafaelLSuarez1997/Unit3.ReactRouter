@@ -1,81 +1,92 @@
+/* 
+I used https://cssbud.com/css-generator/css-glow-generator/ , https://animista.net/ to help with this part
+*/
 * {
-  font-family: arial, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,
-body > div {
-  height: 100vh;
-  width: 100vw;
-}
-
-#container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-#container > div {
-  display: flex;
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
 #navbar {
-  padding: 2em;
-  justify-content: space-evenly;
-}
-
-#main-section {
-  flex-grow: 1;
-}
-
-#main-section > div {
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
 }
 
-.red {
-  color: wheat;
-  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
-  width: 400px;
-  height: 400px;
-  background: #f30000;
-  background: -webkit-linear-gradient(to right,
-      #fc6a6a,
-      #550000);
-  background: linear-gradient(to right,
-      #fc6a6a,
-      #550000);
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blue {
-  color: wheat;
-  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
-  width: 400px;
-  height: 400px;
-  background: #0400ff;
-  background: -webkit-linear-gradient(to right,
-      #06d888,
-      #0400ff);
-  background: linear-gradient(to right,
-      #06d888,
-      #0400ff);
+#navbar a:nth-child(1):hover {
+  background-color: #c4fa00; 
+  color: white; 
 }
 
-.home {
-  color: wheat;
-  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
-  width: 400px;
-  height: 400px;
-  background: #c4fa00;
-  background: -webkit-linear-gradient(to right,
-      #08a4ff,
-      #c4fa00);
-  background: linear-gradient(to right,
-      #08a4ff,
-      #c4fa00);
-}
+#navbar a:nth-child(2):hover {
+  background-color: #f30000; 
+  color: white; 
 }
 
+#navbar a:nth-child(3):hover {
+  background-color: #0400ff; 
+  color: black; 
+}
 
+#navbar a:nth-child(1):hover {
+  box-shadow: 0px 0px 40px 10px #c4fa00 
+}
+
+#navbar a:nth-child(2):hover {
+  box-shadow: 0px 0px 40px 10px #f30000; 
+}
+
+#navbar a:nth-child(3):hover {
+  box-shadow: 0px 0px 40px 10px #0400ff; 
+}
+
+.box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.red .box {
+  background-color: #f30000;
+  color: white;
+}
+
+.blue .box {
+  background-color: #0400ff;
+  color: white;
+}
+
+.home .box {
+  background-color: #c4fa00;
+  color: black;
+}

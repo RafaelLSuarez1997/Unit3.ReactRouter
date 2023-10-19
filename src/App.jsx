@@ -19,9 +19,9 @@ import '../src/index.css'
           </div>
           <div id="main-section">
             <Routes>
-            <Route path="/red" element={<Red />} />
-            <Route path="/blue" element={<Blue />} />
-            <Route path="/" element={<Home />} />
+               <Route path="/red" element={<Red />} />
+              <Route path="/blue" element={<Blue />} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </div>
         </div>
