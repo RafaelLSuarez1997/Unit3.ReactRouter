@@ -1,69 +1,81 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
+  font-family: arial, sans-serif;
   margin: 0;
+}
+
+body,
+body > div {
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  height: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#container > div {
+  display: flex;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#navbar {
+  padding: 2em;
+  justify-content: space-evenly;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#main-section {
+  flex-grow: 1;
 }
+
+#main-section > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  color: wheat;
+  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
+  width: 400px;
+  height: 400px;
+  background: #f30000;
+  background: -webkit-linear-gradient(to right,
+      #fc6a6a,
+      #550000);
+  background: linear-gradient(to right,
+      #fc6a6a,
+      #550000);
+}
+
+.blue {
+  color: wheat;
+  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
+  width: 400px;
+  height: 400px;
+  background: #0400ff;
+  background: -webkit-linear-gradient(to right,
+      #06d888,
+      #0400ff);
+  background: linear-gradient(to right,
+      #06d888,
+      #0400ff);
+}
+
+.home {
+  color: wheat;
+  border-radius: 51% 49% 14% 86% / 100% 100% 0% 0%;
+  width: 400px;
+  height: 400px;
+  background: #c4fa00;
+  background: -webkit-linear-gradient(to right,
+      #08a4ff,
+      #c4fa00);
+  background: linear-gradient(to right,
+      #08a4ff,
+      #c4fa00);
+}
+}
+
+
